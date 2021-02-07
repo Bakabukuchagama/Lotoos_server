@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd
+      http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.2.xsd">
+
+    <changeSet author="vlad" id="2">
+        <addColumn tableName="employee_t">
+            <column name="job" type="VARCHAR"></column>
+            <column name="where" type="VARCHAR"/>
+            <column name="description" type="VARCHAR"/>
+        </addColumn>
+
+        <createTable tableName="clients_t">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR"/>
+            <column name="login" type="VARCHAR"/>
+            <column name="password" type="VARCHAR"/>
+            <column name="money" type="INT"/>
+        </createTable>
+
+        <createTable tableName="services_t">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR"/>
+            <column name="cost" type="INT"/>
+            <column name="where" type="VARCHAR"/>
+            <column name="description" type="VARCHAR"/>
+        </createTable>
+
+        <createTable tableName="employee_image_t">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="id_employee" type="UUID"/>
+            <column name="image" type="BLOB"/>
+        </createTable>
+
+        <createTable tableName="services_image_t">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="id_services" type="UUID"/>
+            <column name="image" type="BLOB"/>
+        </createTable>
+
+        <createTable tableName="sales_t">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="UUID"/>
+            <column name="id_services" type="UUID"/>
+            <column name="description" type="VARCHAR"/>
+            <column name="image" type="BLOB"/>
+        </createTable>
+
+        <createTable tableName="vacancies_t">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR"/>
+            <column name="description" type="VARCHAR"/>
+            <column name="image" type="BLOB"/>
+        </createTable>
+
+
+    </changeSet>
+
+</databaseChangeLog>

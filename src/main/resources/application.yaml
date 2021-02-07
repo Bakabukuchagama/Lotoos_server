@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lotos
+    password: sa
+    username: postgres
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:/changelog.xml
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
