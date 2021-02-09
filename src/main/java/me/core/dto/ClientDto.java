@@ -9,10 +9,12 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployeeDto {
+public class ClientDto {
 
-  private UUID id;
+    private UUID id;
 
-  private String name;
-
+    private String name;
+    private String login;
+    private String password;
+    private Integer money;
 }

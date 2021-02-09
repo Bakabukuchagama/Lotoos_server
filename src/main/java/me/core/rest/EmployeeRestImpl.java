@@ -17,8 +17,6 @@ public class EmployeeRestImpl implements EmployeeRest {
   @Override
   public ResponseEntity<EmployeeDto> getByName(String name) {
     return ResponseEntity.ok(employeeMapper.toDto(employeeRepository.getByName(name)));
-
-
   }
 
   @Override
