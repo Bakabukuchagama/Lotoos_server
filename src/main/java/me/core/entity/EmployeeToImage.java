@@ -23,5 +23,6 @@ public class EmployeeToImage {
     @ManyToOne( cascade = CascadeType.ALL)
     @JoinColumn(name="id_employee")
     private Employee employee;
-    private Blob image;
+   // @Lob
+    private byte[] image;
 }

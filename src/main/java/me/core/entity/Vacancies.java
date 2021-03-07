@@ -22,5 +22,6 @@ public class Vacancies {
 
     private String name;
     private String description;
+    @Lob
     private Blob image;
 }

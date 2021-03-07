@@ -23,5 +23,6 @@ public class ServiceToImage {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_services")
     private Service service;
+    @Lob
     private Blob image;
 }
